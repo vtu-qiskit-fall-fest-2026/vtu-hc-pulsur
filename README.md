@@ -46,9 +46,9 @@
 
 | # | Name | GitHub Username | Role |
 | :-- | :--- | :--- | :--- |
-| 1 | _Add your name_ | _your-github-username_ | _Team Lead_ |
-| 2 | _Add your name_ | _your-github-username_ | _Developer_ |
-| 3 | _Add your name_ | _your-github-username_ | _Developer_ |
+| 1 | _Marzuna M A_ | _MarjunaMarjuna_ | _Team Lead_ |
+| 2 | _Mani santhosh R_ | _manisanthosh2006_ | _Developer_ |
+| 3 | _Peter Jesudass S_ | _peterjesudasss_ | _Developer_ |
 
 <!--
 Optional: add a plain list instead of the table above.
@@ -66,11 +66,13 @@ who experiences it, and why does it matter. Link to the official problem
 statement from the brief if one applies.
 -->
 
-**Problem:** _Describe the problem in 2–3 sentences._
+**Problem:** _Q-XAI is a hybrid quantum-classical AI platform that analyzes satellite images to detect deforestation and highlights the regions influencing its predictions. It combines deep learning, quantum computing, and an interactive dashboard for environmental monitoring._
 
-**Why it matters:** _Explain the impact or opportunity._
+**Why it matters:** _1. Helps monitor forest loss and supports early identification of potential deforestation.
+2. Improves transparency by visually explaining AI predictions through heatmaps.
+3. Explores quantum computing to develop parameter-efficient, noise-resilient environmental AI systems._
 
-**Track / Category:** _Online / Offline · Track 1 / Track 2 · <domain>_
+**Track / Category:** _Online · Track 4 ·Quantum+AI/ML_
 
 ---
 
@@ -81,11 +83,11 @@ Describe your solution. Keep it concrete: the core idea, the user flow, and
 the quantum/ML technique you are applying.
 -->
 
-**Solution:** _In 2–3 sentences, describe what you built._
+**Solution:** _Q-XAI is a hybrid quantum-classical AI platform that analyzes satellite imagery to detect deforestation and generates heatmaps highlighting regions that influence its predictions. It integrates ResNet-18, a 4-qubit quantum circuit, noise mitigation using ZNE, and an interactive Streamlit dashboard._
 
-**Key idea:** _The one-line technical summary of your approach._
+**Key idea:** _Combine classical deep learning with quantum classification and explainable AI to enable transparent, noise-aware satellite image analysis._
 
-**Why this works:** _How your approach addresses the problem statement._
+**Why this works:** _It combines powerful image feature extraction with quantum-based classification while providing visual explanations for model predictions. Noise mitigation and performance benchmarking help evaluate reliability, supporting more interpretable and effective environmental monitoring_
 
 ---
 
@@ -103,11 +105,11 @@ flowchart LR
     D --> E[Output]
 ```
 
-1. **Input** — _what data goes in and in what format_
-2. **Preprocessing** — _cleaning, feature extraction, encoding_
-3. **Quantum core** — _the circuit, ansatz, or algorithm used_
-4. **Post-processing** — _decoding, measurement, scoring_
-5. **Output** — _what the user finally gets_
+1. **Input** — _Satellite images in JPG, PNG, or TIFF format containing forest areas and possible deforestation._
+2. **Preprocessing** — _Resize and normalize images, extract spatial features using pre-trained ResNet-18, and compress the features into four quantum input values._
+3. **Quantum core** — _Encode the features into a 4-qubit Parameterized Quantum Circuit (PQC) using rotation gates and entanglement, with trainable parameters optimized using COBYLA or SPSA._
+4. **Post-processing** — _Measure quantum circuit outputs, convert them into classification scores, and generate Grad-CAM-style heatmaps to explain predictions. Apply Zero-Noise Extrapolation (ZNE) to evaluate and mitigate simulated quantum noise._
+5. **Output** — _An interactive Streamlit dashboard displaying the predicted deforestation status, visual heatmap, quantum circuit, and model performance comparisons._
 
 ---
 
@@ -117,8 +119,8 @@ flowchart LR
 | :--- | :--- |
 | Language | Python 3.11+ |
 | Quantum SDK | Qiskit `>=1.0`, Qiskit Aer, Qiskit Runtime |
-| Optimisation | Qiskit Optimization / COBYLA / SPSA |
-| Simulation | AerSimulator (statevector / noisemodel) |
+| Optimisation |COBYLA / SPSA |
+| Simulation | AerSimulator (noisemodel) |
 | Environment | JupyterLab / VS Code, `venv` |
 | Version control | Git + GitHub |
 
