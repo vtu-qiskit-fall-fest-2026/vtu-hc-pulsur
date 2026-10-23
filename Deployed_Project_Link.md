@@ -1,1 +1,1 @@
-https://qxaiforestapp.streamlit.app/
+https://qxai-deforestation-app.streamlit.app/
